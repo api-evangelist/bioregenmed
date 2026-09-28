@@ -1,23 +1,58 @@
 aid: bioregenmed
+
 name: Bioregenmed
-description: 'Bioregenmed is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Bioregenmed (常州百瑞吉生物医药股份有限公司) is a Chinese high‑tech biomedical company specializing in novel biomaterials for tissue wound repair and regeneration. The firm develops, manufactures, and sells medical devices and bio‑materials for obstetrics, ENT, ophthalmology, and other clinical applications, serving domestic and international markets.'
+
 url: https://raw.githubusercontent.com/api-evangelist/bioregenmed/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
 tags:
-- Company
-apis: []
+- Biomedical
+- Materials
+- TissueRepair
+- China
+- MedicalDevices
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/bioregenmed-hosts.yml
+- type: DomainSecurity
+  url: security/bioregenmed-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/bioregenmed
+  url: https://www.bioregenmed.com
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI, AsyncAPI, GraphQL, or other machine‑readable contract was found at the API host.
+  evidence:
+    - url: https://api.bioregenmed.com
+      status: no-response
+  checked: '2026-09-28'
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
